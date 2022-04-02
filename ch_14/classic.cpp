@@ -45,4 +45,4 @@ Classic& Classic::operator=(const Classic& d)
     main_product[19] = '\0';
     return *this;
 }
-//私有继承 公有继承 保护继承的关系
+

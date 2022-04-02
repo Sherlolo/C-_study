@@ -71,6 +71,7 @@ hasDMA::hasDMA(const char * s, const baseDMA &rs) : baseDMA(rs)
 
 hasDMA::hasDMA(const hasDMA & hs) : baseDMA(hs)
 {
+    //baseDMA(hs);
     style = new char[std::strlen(hs.style) + 1];
     std::strcpy(style, hs.style);
 }
@@ -84,7 +85,7 @@ hasDMA & hasDMA::operator=(const hasDMA & hs)
 {
     if(this == &hs)
         return *this;
-    baseDMA::operator=(hs);
+    baseDMA::operator=hs;
     delete [] style;
     style = new char[std::strlen(hs.style) + 1];
     std::strcpy(style, hs.style);
