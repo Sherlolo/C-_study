@@ -1,6 +1,4 @@
 #include "port.h"
-#include <iostream>
-#include <cstring>
 
 Port::Port()
 {
@@ -16,6 +14,7 @@ Port::Port(const char * br, const char * st, int b)
     band = new char[std::strlen(br) + 1];
     std::strcpy(band,br);
     std::strncpy(style, st, 20);
+    std::cout << "Port() yes\n";
     style[19] = '\0';
     bottles = b;
 }
@@ -79,7 +78,7 @@ std::ostream& operator<<(std::ostream& os, const Port& p)
 //     year = -1;
 // }
 
-VintagePort::VintagePort() : Port("none", "vintage", 0) // ???
+VintagePort::VintagePort() : Port() //Port("none", "vintage", 0) // ???
 {
 
     nickname = new char[5];

@@ -12,6 +12,10 @@ int main()
     // VintagePort v1("faker", 20, "li", 1998);
     // v1.Show();
     // std::cout << v1;
-    VintagePort v1;
+
+    // VintagePort v1;
+    // std::cout << v1.BottleCount() << std::endl;
+    Port v1; //v1() ->Port()
+    std::cout << v1 << std::endl;
     return 0;
 }

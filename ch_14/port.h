@@ -1,6 +1,8 @@
 #ifndef PORT_H_
 #define PORT_H_
 #include <iostream>
+#include <string>
+#include <cstring>
 class Port
 {
 private:
@@ -9,7 +11,7 @@ private:
     int bottles;
 public:
     Port();
-    Port(const char * br = "none", const char * st = "none", int b = 0);
+    Port(const char * br = "NULL", const char * st = "none", int b = 0);
     Port(const Port& p);
     virtual ~Port();
     Port& operator=(const Port& p);
