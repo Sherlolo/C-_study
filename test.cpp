@@ -1,17 +1,38 @@
 #include <iostream>
-#include <vector>
-#include <array>
-#include <valarray>
 #include <string>
-enum color_set1 {RED, BLUE, WHITE, BLACK}; // 定义枚举类型color_set1
 
+using std::string;
+class Test
+{
+public:
+    Test(string _a) : a(_a) 
+    {
+        std::cout << "Test()" << std::endl;
+    }
+    Test(const Test& rhs)
+    {
+        std::cout << "Test(Test&)" << std::endl;
+        a = rhs.a;
+    }
+    Test& operator=(const Test& rhs)
+    {
+        if(this == &rhs)
+            return *this;
+        a = rhs.a;
+        return *this;
+    }
+private:
+    string a;
+};
 
 int main()
 {
-    int a = 0;
-	std::cout << "Hi";
-	std::cout << " yes";
+    std::cout << "a" << std::endl;
+    Test a("a");
+    std::cout << "b" << std::endl;
+    Test b{"a"};
+    std::cout << "c" << std::endl;
+    Test c = "a";
     system("pause");
     return 0;
 }
-
